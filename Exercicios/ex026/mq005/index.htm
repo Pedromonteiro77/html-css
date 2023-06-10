@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu responsivo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/reset.css" media="all">
+    <link rel="stylesheet" href="./css/style.css" media="all">
+    <link rel="stylesheet" href="./css/media-query.css">
+</head>
+<body onresize="redirecionar()">
+    <header>
+        <h1>Meu Site</h1>
+        
+        <span id="burg" class="material-symbols-outlined">
+            menu
+        </span>
+            <menu class="menu">
+                <ul>
+                    <li><a href="#">Opção 1</a></li>
+                    <li><a href="#">Opção 2</a></li>
+                    <li><a href="#">Opção 3</a></li>
+                    <li><a href="#">Opção 4</a></li>
+                    <li><a href="#">Opção 5</a></li>
+                </ul>
+            </menu>
+            
+    </header>
+
+    <main>
+
+        <article>
+            <h2>Testado Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse, consequuntur odio hic minus magni quae id sunt magnam, adipisci dolorem amet praesentium animi nesciunt commodi fugit voluptas numquam deleniti. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae porro ratione id explicabo doloremque corrupti maxime obcaecati sit deleniti suscipit aliquam nesciunt ex aperiam mollitia aspernatur accusantium, quo odio hic.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam omnis unde voluptatem neque fuga doloremque? Exercitationem distinctio dolorem, magnam vel quod, molestiae sapiente maiores officiis quae placeat libero illum laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempora, doloremque ad dicta placeat tempore repellat? Fugit recusandae quidem voluptatem excepturi. Ipsam nihil, amet fugit aperiam beatae eius expedita sit!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam fugiat ea animi voluptates, perspiciatis non repellendus doloremque architecto. Officiis corrupti cupiditate fuga. Nisi suscipit porro distinctio est vitae tempora? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rem consectetur pariatur aut dolores cupiditate, eos voluptatibus ipsa porro at eaque quidem laudantium aliquam. Adipisci, blanditiis ducimus! Dicta, numquam porro?</p>
+        </article> 
+
+    </main>
+    
+
+    <script>
+        const menu = document.querySelector('.menu')
+        const burg = document.querySelector('#burg')
+
+        function clickMenu() {
+            if(menu.style.display == 'block'){
+                menu.style.display = 'none'
+
+            }else {
+                menu.style.display = 'block'
+
+            }                
+        }
+        
+        function redirecionar() {
+            if(window.innerWidth >= 768) {
+                menu.style.display = 'block'
+
+            }else {
+                menu.style.display = 'none'
+            }
+        }
+
+        burg.addEventListener('click', clickMenu)
+    </script>
+</body>
+</html>
