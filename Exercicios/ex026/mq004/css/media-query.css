@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* Todas as demais medias */
+
+@media print {
+    main {
+        font-family: 'Courier New', Courier, monospace;
+        border: 2px solid black;
+        width: 90vw;
+    }
+
+    main h1 {
+        color: black;
+        text-shadow: none;   
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita por Pedro';
+        text-decoration: overline;
+    }
+
+    .dis {
+        display: none;
+    }
+
+    .print {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {    /*Tablet*/
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    main img {
+        background-image: url(../imagens/icon-tablet.png);
+    }
+
+    .dis {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {    /*Desktop*/
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    main img {
+        background-image: url(../imagens/icon-pc.png);
+    }
+
+    .dis {
+        display: none;
+    }
+
+    .pc {
+        display: block;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {    
+    /*Grandes telas*/
+   body {
+        background-image: url(../imagens/back-tv.jpg);
+   }
+
+   main {
+        width: 900px;
+   }
+
+   main img {
+        background-image: url(../imagens/icon-tv.png);
+   }
+
+   .dis {
+        display: none;
+   }
+
+   .tv {
+        display: block;
+   }
+}
